@@ -4,6 +4,7 @@
 #include "circle.h"
 #include "triplet.h"
 #include <iostream>
+#include <algorithm>
 
 class Data
 {
@@ -17,6 +18,9 @@ public:
 	std::vector<Point> m_points;
 	std::vector<Triplet> m_triplets;
 
+	static const int TRIPLET = 3;
+
 	void print(bool printCircles=false);
+	void create_triplets();
 };
 

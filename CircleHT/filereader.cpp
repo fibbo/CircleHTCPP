@@ -15,19 +15,28 @@ void FileReader::readfile(const char * input, Data* data)
 {
 	std::ifstream ifs(input, std::ifstream::in);
 	std::string line;
-	char delim = ' ';
-	while (std::getline(ifs, line))
-	{
-		if (line.compare(0, 10, circleString) == 0)
-		{
-			std::vector<std::string> v;
-			split(line, delim, v);
-			data->m_iNumberOfTruePoints += stoi(v[3]);
-			Circle circle;
-			circle.radius = stof(v[7]);
-			circle.center = Point(stof(v[9]), stof(v[10]));
-			data->m_circles.push_back(circle);
-		}
+	char delim = '  ';
+    while (std::getline(ifs, line))
+    {
+        if (line.compare(0, 10, circleString) == 0)
+        {
+            std::vector<std::string> v;
+            split(line, delim, v);
+            data->m_iNumberOfTruePoints += stoi(v[3]);
+            Circle circle;
+            circle.radius = stof(v[7]);
+            circle.center = Point(stof(v[9]), stof(v[10]));
+            data->m_circles.push_back(circle);
+        }
+        else if (line.compare(0, 1, "#"))
+        {
+            std::vector<std::string> v;
+            split(line, delim, v);
+            Point p;
+            p.x = stof(v[0]);
+            p.y = stof(v[1]);
+            data->m_points.push_back(p);
+        }
 	}
 	data->m_iNumberOfCirles = data->m_circles.size();
 }
