@@ -24,51 +24,12 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="logging.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="circle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="filereader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="triplet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="circleht.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="circle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="circleht.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="data.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="filereader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="triplet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ring.cpp">
+    <ClCompile Include="CircleHT_Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

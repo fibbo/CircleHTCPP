@@ -9,6 +9,5 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include "logging.h"
 
 // TODO: reference additional headers your program requires here

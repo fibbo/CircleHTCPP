@@ -5,9 +5,9 @@ class Circle
 {
 public:
 	Circle() {}
-	Circle(Point c, float r) : center(c), radius(r) {}
+	Circle(BSE::Point c, float r) : center(c), radius(r) {}
 	~Circle() {}
-	Point center;
+	BSE::Point center;
 	float radius;
 
 	void print();

@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include "point.h"
 #include "circle.h"
 #include "triplet.h"
 #include <iostream>
@@ -15,12 +14,13 @@ public:
 	int m_iNumberOfCirles;
 	int m_iNumberOfTruePoints;
 	std::vector<Circle> m_circles;
-	std::vector<Point> m_points;
-	std::vector<Triplet> m_triplets;
+	std::vector<BSE::Point*> m_points;
+	std::vector<Triplet*> m_triplets;
 
 	static const int TRIPLET = 3;
 
 	void print(bool printCircles=false);
 	void create_triplets();
+    void create_rings();
 };
 

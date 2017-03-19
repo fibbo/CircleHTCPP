@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CB524F54-51D5-4FAC-8D47-CDE2B5E7F5F5}</ProjectGuid>
+    <ProjectGuid>{E9812BB2-FDE7-44D4-8995-DD93F6A1CA3B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CircleHT</RootNamespace>
+    <RootNamespace>CircleHT_Test</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,23 +71,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -96,27 +96,29 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\CircleHT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>bse.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\CircleHT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>bse.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -128,6 +130,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\CircleHT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,56 +138,45 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>bse.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\CircleHT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ShowProgress>NotSet</ShowProgress>
       <AdditionalDependencies>bse.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="circle.h" />
-    <ClInclude Include="circleht.h" />
-    <ClInclude Include="data.h" />
-    <ClInclude Include="filereader.h" />
-    <ClInclude Include="ring.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="logging.h" />
-    <ClInclude Include="triplet.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="circle.cpp" />
-    <ClCompile Include="circleht.cpp" />
-    <ClCompile Include="data.cpp" />
-    <ClCompile Include="filereader.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ring.cpp" />
+    <ClCompile Include="CircleHT_Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="triplet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bse\bse.vcxproj">
