@@ -4,16 +4,20 @@
 
 namespace BSE
 {
+    template<class T>
     class Point : BaseObject
     {
     public:
         Point() {}
         ~Point() {}
-        Point(float _x, float _y) : x(_x), y(_y) {}
+        Point(T _x, T _y) : x(_x), y(_y) {}
 
-        std::string to_string();
+        std::string to_string()
+        {
+            return (std::to_string(x) + ", " + std::to_string(y));
+        }
 
-        float x, y;
+        T x, y;
 
         friend bool operator<(const Point &lhs, const Point &rhs) { return (lhs.x*lhs.x + lhs.y*lhs.y) < (rhs.x*rhs.x + rhs.y*rhs.y); }
         friend Vector2d operator-(const Point &lhs, const Point &rhs) { return Vector2d(lhs.x - rhs.x, lhs.y - rhs.y); }

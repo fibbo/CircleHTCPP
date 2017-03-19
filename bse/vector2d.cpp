@@ -7,4 +7,9 @@ namespace BSE
         return (std::to_string(x) + ", " + std::to_string(y));
     }
 
+    float Vector2d::norm()
+    {
+        return sqrt(x*x + y*y);
+    }
+
 }

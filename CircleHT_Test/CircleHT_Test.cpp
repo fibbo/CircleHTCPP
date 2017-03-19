@@ -8,8 +8,8 @@
 
 int main()
 {
-    BSE::Point x1(1., 1.);
-    BSE::Point x2(3., 4.);
+    BSE::Point<float> x1(1., 1.);
+    BSE::Point<float> x2(3., 4.);
 
     BSE::Vector2d v = x2 - x1;
     std::cout << v.to_string() << std::endl;

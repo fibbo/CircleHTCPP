@@ -71,22 +71,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse\x64\Release;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\x64\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>C:\Users\phi\Documents\Visual Studio 2015\Projects\CircleHT\bse;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

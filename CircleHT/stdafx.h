@@ -10,5 +10,5 @@
 #include <stdio.h>
 #include <tchar.h>
 #include "logging.h"
-
+#include "global.h"
 // TODO: reference additional headers your program requires here

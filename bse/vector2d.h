@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseObject.h"
+#include <math.h>
 namespace BSE {
     class Vector2d : BaseObject
     {
@@ -10,7 +11,7 @@ namespace BSE {
         float x, y;
 
         std::string to_string() override;
-
+        float norm();
     };
 }
 

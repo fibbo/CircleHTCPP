@@ -5,13 +5,13 @@ class Triplet
 {
 public:
 	Triplet();
-    Triplet(BSE::Point* p0, BSE::Point* p1, BSE::Point* p2)
+    Triplet(BSE::Point<float>* p0, BSE::Point<float>* p1, BSE::Point<float>* p2)
     {
         points[0] = p0;
         points[1] = p1;
         points[2] = p2;
     }
 	~Triplet();
-	BSE::Point* points[3];
+	BSE::Point<float>* points[3];
 };
 

@@ -165,6 +165,7 @@
     <ClInclude Include="circleht.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="filereader.h" />
+    <ClInclude Include="global.h" />
     <ClInclude Include="ring.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
