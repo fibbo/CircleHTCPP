@@ -5,7 +5,7 @@
 namespace BSE
 {
     template<class T>
-    class Triplet
+    class Triplet : BaseObject
     {
     public:
         Triplet() {}
@@ -18,7 +18,7 @@ namespace BSE
         ~Triplet() {}
         Point<T>* points[3];
 
-        std::string to_string()
+        std::string to_string() override
         {
             throw NotImplementedException();
         }
