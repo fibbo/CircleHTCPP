@@ -135,11 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baseobject.h" />
+    <ClInclude Include="circle.h" />
+    <ClInclude Include="exceptions.h" />
     <ClInclude Include="point.h" />
+    <ClInclude Include="ring.h" />
+    <ClInclude Include="triplet.h" />
     <ClInclude Include="vector2d.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="vector2d.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

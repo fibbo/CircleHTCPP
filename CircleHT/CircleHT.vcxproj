@@ -161,31 +161,25 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="circle.h" />
     <ClInclude Include="circleht.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="filereader.h" />
     <ClInclude Include="global.h" />
-    <ClInclude Include="ring.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="logging.h" />
-    <ClInclude Include="triplet.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="circle.cpp" />
     <ClCompile Include="circleht.cpp" />
     <ClCompile Include="data.cpp" />
     <ClCompile Include="filereader.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ring.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="triplet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bse\bse.vcxproj">

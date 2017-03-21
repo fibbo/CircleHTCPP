@@ -32,7 +32,7 @@ void Data::create_triplets()
         {
             for (int l = k + 1; l < m_points.size(); l++)
             {
-                Triplet* p = new Triplet(m_points[j], m_points[k], m_points[l]);
+                BSE::Triplet<float>* p = new BSE::Triplet<float>(m_points[j], m_points[k], m_points[l]);
                 m_triplets.push_back(p);
             }
         }

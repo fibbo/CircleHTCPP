@@ -20,6 +20,6 @@ namespace BSE
         T x, y;
 
         friend bool operator<(const Point &lhs, const Point &rhs) { return (lhs.x*lhs.x + lhs.y*lhs.y) < (rhs.x*rhs.x + rhs.y*rhs.y); }
-        friend Vector2d operator-(const Point &lhs, const Point &rhs) { return Vector2d(lhs.x - rhs.x, lhs.y - rhs.y); }
+        friend Vector2d<T> operator-(const Point &lhs, const Point &rhs) { return Vector2d<T>(lhs.x - rhs.x, lhs.y - rhs.y); }
     };
 }

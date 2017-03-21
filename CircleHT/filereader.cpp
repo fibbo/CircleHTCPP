@@ -23,7 +23,7 @@ void FileReader::readfile(const char * input, Data* data)
             std::vector<std::string> v;
             split(line, delim, v);
             data->m_iNumberOfTruePoints += stoi(v[3]);
-            Circle circle;
+            BSE::Circle<float> circle;
             circle.radius = stof(v[7]);
             circle.center = BSE::Point<float>(stof(v[9]), stof(v[10]));
             data->m_circles.push_back(circle);

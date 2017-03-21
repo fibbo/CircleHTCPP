@@ -14,9 +14,9 @@ public:
 
 	int m_iNumberOfCirles;
 	int m_iNumberOfTruePoints;
-	std::vector<Circle> m_circles;
+	std::vector<BSE::Circle<float>> m_circles;
 	std::vector<BSE::Point<float>*> m_points;
-	std::vector<Triplet*> m_triplets;
+	std::vector<BSE::Triplet<float>*> m_triplets;
 
 	static const int TRIPLET = 3;
 
