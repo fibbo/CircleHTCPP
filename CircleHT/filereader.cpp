@@ -33,7 +33,7 @@ void FileReader::readfile(const char * input, Data* data)
             std::vector<std::string> v;
             split(line, delim, v);
             BSE::Point<float>* p = new BSE::Point<float>(stof(v[0]), stof(v[1]));
-            data->m_points.push_back(p);
+            data->m_points->push_back(p);
         }
 	}
 	data->m_iNumberOfCirles = (int)data->m_circles.size();

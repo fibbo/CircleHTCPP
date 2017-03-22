@@ -1,11 +1,6 @@
 #include "stdafx.h"
 #include "data.h"
-
-
-Data::Data()
-{
-}
-
+#include <algorithm>
 
 Data::~Data()
 {
@@ -26,14 +21,14 @@ void Data::print(bool printCircles)
 
 void Data::create_triplets()
 {
-    for (int j = 0; j < m_points.size() - 2; j++)
+    for (int j = 0; j < m_points->size() - 2; j++)
     {
-        for (int k = j + 1; k < m_points.size() - 1; k++)
+        for (int k = j + 1; k < m_points->size() - 1; k++)
         {
-            for (int l = k + 1; l < m_points.size(); l++)
+            for (int l = k + 1; l < m_points->size(); l++)
             {
-                BSE::Triplet<float>* p = new BSE::Triplet<float>(m_points[j], m_points[k], m_points[l]);
-                m_triplets.push_back(p);
+                BSE::Triplet<float>* p = new BSE::Triplet<float>(m_points->at(j), m_points->at(k), m_points->at(l));
+                m_triplets->push_back(p);
             }
         }
     }
@@ -41,12 +36,12 @@ void Data::create_triplets()
 
 void Data::create_rings()
 {
-    for (int i = 0; i < m_triplets.size(); i++)
+    for (int i = 0; i < m_triplets->size(); i++)
     {
         BSE::Point<float> *A, *B, *C;
-        A = m_triplets[i]->points[0];
-        B = m_triplets[i]->points[1];
-        C = m_triplets[i]->points[2];
+        A = m_triplets->at(i)->points[0];
+        B = m_triplets->at(i)->points[1];
+        C = m_triplets->at(i)->points[2];
 
         float a, b, c;
         a = (*C - *B).norm();
@@ -69,7 +64,23 @@ void Data::create_rings()
             l1 = a2 * (b2 + c2 - a2);
             l2 = b2 * (a2 + c2 - b2);
             l3 = c2 * (a2 + b2 - c2);
-            
+
+            BSE::Point<float> c(A->x*l1 + B->x*l2 + C->x*l3, A->y*l1 + B->y*l2 + C->y*l3);
+            c /= (l1 + l2 + l3);
+            BSE::Ring<float>* r = new BSE::Ring<float>(c, R);
+            m_rings.push_back(r);
         }
     }
+    // I don't need them anymore
+    delete m_triplets;
+    m_triplets = nullptr;
+}
+
+void Data::sort_rings()
+{
+    std::sort(m_rings.begin(), m_rings.end(),
+        [](const BSE::Ring<float>* a, const BSE::Ring<float>* b)
+    {
+        return a->m_radius > b->m_radius;
+    });
 }

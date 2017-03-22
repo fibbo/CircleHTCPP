@@ -19,10 +19,11 @@ namespace BSE
 
 
         // Inherited via BaseObject
-        std::string BSE::Ring::to_string() override
+        std::string to_string() override
         {
             return std::string();
         }
+
 
     };
 }
