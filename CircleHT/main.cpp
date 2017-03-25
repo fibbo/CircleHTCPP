@@ -1,14 +1,13 @@
 // CircleHT.cpp : Defines the entry point for the console application.
 //
 
-#include "circleht.h"
 #include "filereader.h"
 
 int main(int argc, char* argv[])
 {
 	FileReader fr;
 	Data data;
-	fr.readfile("C:\\Users\\phi\\Documents\\GitHub\\CircleHoughTransform\\data\\forpresentation.txt", &data);
+	fr.readfile("file\\to\\data.txt", &data);
 	data.create_triplets();
     data.create_rings();
     data.sort_rings();
