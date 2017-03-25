@@ -25,7 +25,7 @@ hits = "_hits_"
 extension = ".txt"
 filename = path+filename+str(NUMBER_OF_BACKGROUND_HITS)+bg+extension
 
-filename = 'data/forpresentation.txt'
+filename = '../data/forpresentation.txt'
 g.writeToFile(filename)
 #g.prepare()
 #g.writeToFile("exampleB.txt")
