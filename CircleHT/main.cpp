@@ -10,7 +10,6 @@ int main(int argc, char* argv[])
 	Data data;
 	fr.readfile("C:\\Users\\phi\\Documents\\GitHub\\CircleHoughTransform\\data\\forpresentation.txt", &data);
 	data.create_triplets();
-	CircleHT::findcircles("");
     data.create_rings();
     data.sort_rings();
 	data.print();

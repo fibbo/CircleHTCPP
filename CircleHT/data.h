@@ -24,11 +24,15 @@ public:
 	std::vector<BSE::Triplet<float>*>* m_triplets;
     std::vector<BSE::Ring<float>*> m_rings;
 
-	static const int TRIPLET = 3;
-
 	void print(bool printCircles=false);
+
+    // Create all possible 3-tuple that can be made with the available points
 	void create_triplets();
+    
+    //Calculates the rings that are defined by the three points of each triplet
     void create_rings();
+
+    //Sort the rings according to their radius
     void sort_rings();
 };
 

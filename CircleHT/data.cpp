@@ -81,6 +81,6 @@ void Data::sort_rings()
     std::sort(m_rings.begin(), m_rings.end(),
         [](const BSE::Ring<float>* a, const BSE::Ring<float>* b)
     {
-        return a->m_radius > b->m_radius;
+        return a->m_radius < b->m_radius;
     });
 }
