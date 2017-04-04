@@ -15,7 +15,7 @@ namespace BSE {
             return (std::to_string(x) + ", " + std::to_string(y));
         }
 
-        float norm()
+        T norm()
         {
             return sqrt(x*x + y*y);
         }

@@ -305,3 +305,4 @@ $RECYCLE.BIN/
 # Python
 *.pyc
 data/forpresentation.txt
+*.txt

@@ -135,8 +135,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baseobject.h" />
+    <ClInclude Include="binnableObject.h" />
     <ClInclude Include="circle.h" />
+    <ClInclude Include="entry.h" />
     <ClInclude Include="exceptions.h" />
+    <ClInclude Include="histogram.h" />
     <ClInclude Include="point.h" />
     <ClInclude Include="ring.h" />
     <ClInclude Include="triplet.h" />

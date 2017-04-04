@@ -1,11 +1,12 @@
 #pragma once
 #include "point.h"
 #include "baseobject.h"
+#include "binnableObject.h"
 
 namespace BSE
 {
     template<class T>
-    class Ring : BaseObject
+    class Ring : BaseObject, BinnableObject<T>
     {
     public:
         Ring(BSE::Point<T> c, T r)
@@ -24,6 +25,9 @@ namespace BSE
             return std::string();
         }
 
-
+        T getBinnableObject()
+        {
+            return m_radius;
+        }
     };
 }

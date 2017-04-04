@@ -171,7 +171,6 @@
     <ClInclude Include="logging.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="circleht.cpp" />
     <ClCompile Include="data.cpp" />
     <ClCompile Include="filereader.cpp" />
     <ClCompile Include="main.cpp" />
