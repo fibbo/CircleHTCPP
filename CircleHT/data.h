@@ -14,15 +14,17 @@ public:
     {
         m_triplets = new std::vector<BSE::Triplet<float> *>();
         m_points = new std::vector<BSE::Point<float> *>();
+		m_circles = new std::vector<BSE::Circle<float>>();
+		m_rings = new std::vector<BSE::Ring<float>>();
     }
 	~Data();
 
 	int m_iNumberOfCirles;
 	int m_iNumberOfTruePoints;
-	std::vector<BSE::Circle<float>> m_circles;
+	std::vector<BSE::Circle<float>>* m_circles;
 	std::vector<BSE::Point<float>*>* m_points;
 	std::vector<BSE::Triplet<float>*>* m_triplets;
-    std::vector<BSE::Ring<float>*> m_rings;
+    std::vector<BSE::Ring<float>>* m_rings;
 
 	void print(bool printCircles=false);
 

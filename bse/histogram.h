@@ -6,46 +6,49 @@
 #include <iostream>
 
 namespace BSE {
+    template<typename T>
     class Histogram
     {
     public:
-        template<typename T> Histogram(float start, float end, float bin_size, std::vector<T>* data);
+        template<typename V> Histogram(T start, T end, T bin_size, std::vector<V>* data)
+        {
+            m_start = start;
+            m_end = end;
+            m_bin_size = bin_size;
+
+            int nBins = (int)ceil((end - start) / bin_size);
+            m_bins.resize(nBins);
+            int firstEntryIndex = 0;
+            int lastEntryIndex = 0;
+            int currentBin = 0;
+            T curMaxValue = (currentBin + 1)*bin_size + start;
+            int index = 0;
+            for (int i = 0; i < m_bins.size(); i++)
+            {
+                while (index < data->size() && data->at(index).getBinnableObject() < curMaxValue)
+                    ++index;
+
+                Entry e(firstEntryIndex, index);
+                curMaxValue += bin_size;
+                firstEntryIndex = index;
+                m_bins.at(i) = e;
+            }
+        }
 
 
-        std::vector<Entry> bins;
+        std::vector<Entry> m_bins;
+        T m_start;
+        T m_end;
+        T m_bin_size;
+
         void print()
         {
-            for (auto bin : bins)
+            for (auto e : m_bins)
             {
-                std::cout << bin.to_string() + "\n";
+                std::cout << e.to_string() + "\n";
             }
         }
     };
 
-    template<typename T> Histogram::Histogram(float start, float end, float bin_size, std::vector<T>* data)
-    {
-        int nBins = (int)ceil((end - start) / bin_size);
-        bins.resize(nBins);
-        int lastBin = 0;
-        int currentBin = 0;
-        float curMaxValue = (currentBin + 1)*bin_size + start;
-        for (int i = 0; i < data->size(); i++)
-        {
-            auto binObject = data->at(i)->getBinnableObject();
-            if ( binObject < curMaxValue)
-            {
-                std::cout << data->at(i)->getBinnableObject() << std::endl;
-                ++currentBin;
-            }
-            else
-            {
-                std::cout << data->at(i)->getBinnableObject() << std::endl;
-                Entry e(lastBin, currentBin);
-                bins.push_back(e);
-                lastBin = currentBin;
-                ++currentBin;
-                curMaxValue = (currentBin + 1)*bin_size;
-            }
-        }
-    }
+
 }

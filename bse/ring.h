@@ -29,5 +29,7 @@ namespace BSE
         {
             return m_radius;
         }
+
+        friend bool operator<(const Ring& lhs, const Ring& rhs) { return lhs.m_radius < rhs.m_radius; }
     };
 }

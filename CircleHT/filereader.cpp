@@ -26,7 +26,7 @@ void FileReader::readfile(const char * input, Data* data)
             BSE::Circle<float> circle;
             circle.radius = stof(v[7]);
             circle.center = BSE::Point<float>(stof(v[9]), stof(v[10]));
-            data->m_circles.push_back(circle);
+            data->m_circles->push_back(circle);
         }
         else if (line.compare(0, 1, "#"))
         {
@@ -36,7 +36,7 @@ void FileReader::readfile(const char * input, Data* data)
             data->m_points->push_back(p);
         }
 	}
-	data->m_iNumberOfCirles = (int)data->m_circles.size();
+	data->m_iNumberOfCirles = (int)data->m_circles->size();
 }
 
 void FileReader::split(const std::string& s, char delim, std::vector<std::string>& v) {

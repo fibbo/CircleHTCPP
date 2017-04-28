@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 	data.create_triplets();
     data.create_rings();
     data.sort_rings();
-    BSE::Histogram h(0.05f, 0.090f, 0.010f, &data.m_rings);
+    BSE::Histogram<float> h(0.07f, 0.170f, 0.010f, data.m_rings);
     h.print();
 	data.print();
 	std::getchar();

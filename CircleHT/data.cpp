@@ -13,7 +13,7 @@ void Data::print(bool printCircles)
 	{
 		for (int i = 0; i < m_iNumberOfCirles; i++)
 		{
-			this->m_circles[i].print();
+			this->m_circles->at(i).print();
 		}
 	}
 	
@@ -67,8 +67,8 @@ void Data::create_rings()
 
             BSE::Point<float> c(A->x*l1 + B->x*l2 + C->x*l3, A->y*l1 + B->y*l2 + C->y*l3);
             c /= (l1 + l2 + l3);
-            BSE::Ring<float>* r = new BSE::Ring<float>(c, R);
-            m_rings.push_back(r);
+			BSE::Ring<float> r(c, R);
+            m_rings->push_back(r);
         }
     }
     // I don't need them anymore
@@ -78,9 +78,9 @@ void Data::create_rings()
 
 void Data::sort_rings()
 {
-    std::sort(m_rings.begin(), m_rings.end(),
-        [](const BSE::Ring<float>* a, const BSE::Ring<float>* b)
+    std::sort(m_rings->begin(), m_rings->end(),
+        [](const BSE::Ring<float> a, const BSE::Ring<float> b)
     {
-        return a->m_radius < b->m_radius;
+        return a < b;
     });
 }
