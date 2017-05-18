@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 {
 	FileReader fr;
 	Data data;
-	fr.readfile("..\\data\\simple.txt", &data);
+	fr.readfile("..\\data\\1circle400bg.txt", &data);
 	data.create_triplets();
     data.create_rings();
     data.sort_rings();

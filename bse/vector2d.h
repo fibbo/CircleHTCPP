@@ -6,12 +6,12 @@ namespace BSE {
     class Vector2d : BaseObject
     {
     public:
-        Vector2d() {}
+		Vector2d() = default;
         Vector2d(T _x, T _y) : x(_x), y(_y) {}
-        ~Vector2d() {};
+		~Vector2d() = default;
         T x, y;
 
-        std::string to_string() {
+        virtual std::string to_string() override {
             return (std::to_string(x) + ", " + std::to_string(y));
         }
 

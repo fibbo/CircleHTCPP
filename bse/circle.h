@@ -8,9 +8,9 @@ namespace BSE
     class Circle : BaseObject
     {
     public:
-        Circle() {}
+        Circle() = default;
         Circle(BSE::Point<T> c, T r) : center(c), radius(r) {}
-        ~Circle() {}
+        ~Circle() = default;
         BSE::Point<T> center;
         T radius;
 
@@ -19,7 +19,7 @@ namespace BSE
             std::cout << "Circle:\t" << "Center: (" << center.x << ", " << center.y << ")" << "\t" << "Radius: " << radius << std::endl;
         }
 
-        std::string to_string() override
+        virtual std::string to_string() override
         {
             return std::string();
         }

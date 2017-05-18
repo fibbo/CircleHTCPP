@@ -7,9 +7,7 @@ FileReader::FileReader()
 }
 
 
-FileReader::~FileReader()
-{
-}
+FileReader::~FileReader() = default;
 
 void FileReader::readfile(const char * input, Data* data)
 {

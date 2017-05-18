@@ -2,9 +2,9 @@ from DataGenerator.Basic import Plane,Generator
 from DataGenerator.Shapes import Circle
 
 NUMBER_OF_CIRCLES = 1
-CIRCLE_HITS = 5
+CIRCLE_HITS = 30
 POISSON_BACKGROUND_HITS = False
-NUMBER_OF_BACKGROUND_HITS = 0
+NUMBER_OF_BACKGROUND_HITS = 400
 
 
 p = Plane(xmin=-.5,xmax=.5,ymin=-.5,ymax=.5)
@@ -25,7 +25,7 @@ hits = "_hits_"
 extension = ".txt"
 filename = path+filename+str(NUMBER_OF_BACKGROUND_HITS)+bg+extension
 
-filename = '../data/simple.txt'
+filename = '../data/1circle400bg.txt'
 g.writeToFile(filename)
 #g.prepare()
 #g.writeToFile("exampleB.txt")

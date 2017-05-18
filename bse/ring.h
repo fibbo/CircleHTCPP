@@ -14,13 +14,13 @@ namespace BSE
             m_center = c;
             m_radius = r;
         }
-        ~Ring() {}
+        ~Ring() = default;
         BSE::Point<T> m_center;
         T m_radius;
 
 
         // Inherited via BaseObject
-        std::string to_string() override
+        virtual std::string to_string() override
         {
             return std::string();
         }

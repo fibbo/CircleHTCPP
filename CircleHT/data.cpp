@@ -36,12 +36,12 @@ void Data::create_triplets()
 
 void Data::create_rings()
 {
-    for (int i = 0; i < m_triplets->size(); i++)
+    for (auto & m_triplet : *m_triplets)
     {
         BSE::Point<float> *A, *B, *C;
-        A = m_triplets->at(i)->points[0];
-        B = m_triplets->at(i)->points[1];
-        C = m_triplets->at(i)->points[2];
+        A = m_triplet->points[0];
+        B = m_triplet->points[1];
+        C = m_triplet->points[2];
 
         float a, b, c;
         a = (*C - *B).norm();

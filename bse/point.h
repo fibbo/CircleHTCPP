@@ -8,11 +8,11 @@ namespace BSE
     class Point : BaseObject
     {
     public:
-        Point() {}
-        ~Point() {}
+		Point() = default;
+		~Point() = default;
         Point(T _x, T _y) : x(_x), y(_y) {}
 
-        std::string to_string()
+        virtual std::string to_string() override
         {
             return (std::to_string(x) + ", " + std::to_string(y));
         }
